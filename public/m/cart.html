@@ -16,41 +16,41 @@
     <link rel="stylesheet" href="assets/mui/css/mui.min.css">
     <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/search.css">
-    <title>传淘-搜索中心</title>
+    <link rel="stylesheet" href="css/cate.css">
+    <title>传淘-购物车</title>
 </head>
 <body>
 <!--首页内容-->
 <div class="ct_container">
     <header class="ct_header">
         <a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
-        <h3>搜索中心</h3>
+        <h3>传淘云购</h3>
+        <a href="search.html" class="right"><span class="fa fa-search"></span></a>
     </header>
-    <section class="ct_content">
-        <div class="ct_content_box">
-            <!--搜索栏-->
-            <div class="btn_search">
-                <form action="">
-                    <input type="text" placeholder="搜索你喜欢的商品">
-                </form>
-                <a href="javascript:;">搜索</a>
-            </div>
-            <!--清空搜索记录-->
-            <div class="ct_history mui-clearfix"><span class="history">没有历史搜索记录</span><span class="clear_history fa fa-trash">清空记录</span></div>
-            <!--搜索历史记录-->
-            <ul></ul>
-        </div>
-    </section>
     <footer class="ct_footer">
         <a class="tab_home fa fa-home" href="index.html"><span>首页</span></a>
         <a class="tab_cate fa fa-bars" href="cate.html"><span>分类</span></a>
-        <a class="tab_cart fa fa-shopping-cart" href="cart.html"><span>购物车</span></a>
+        <a class="tab_cart fa fa-shopping-cart now" href="cart.html"><span>购物车</span></a>
         <a class="tab_user fa fa-user" href="user/index.html"><span>会员中心</span></a>
     </footer>
 </div>
 <script src="assets/zepto/zepto.min.js"></script>
 <script src="assets/mui/js/mui.min.js"></script>
 <script src="assets/artTemplate/template-native.js"></script>
-<script src="js/search.js"></script>
+<script id="firstTemplate" type="text/template">
+    <% for(let i=0;i<rows.length;i++) { %>
+    <li class="<%=i==0?'now':''%>"><a href="javascript:;" data-id="<%=rows[i].id%>"><%=rows[i].categoryName%></a></li>
+    <% } %>
+</script>
+<script id="secondTemplate" type="text/template">
+    <% if(rows.length) {%>
+    <% for(let i=0;i<rows.length;i++) { %>
+    <li><a href="javascript:;"><img src="<%=rows[i].brandLogo%>" alt=""><p><%=rows[i].brandName%></p></a></li>
+    <% } %>
+    <% } else { %>
+    <p>没有数据</p>
+    <% } %>
+</script>
+<script src="js/cate.js"></script>
 </body>
 </html>

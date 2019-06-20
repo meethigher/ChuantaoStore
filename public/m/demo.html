@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta name="description" content="乐淘是中国最大的正品运动鞋、皮鞋网上专卖。乐淘网经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
+    <meta name="Keywords"
+          content="乐淘 乐淘鞋城 买鞋子 上乐淘 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>demo</title>
+</head>
+<body>
+<!--首页内容-->
+<div class="ct_container">
+    <header class="ct_header">
+        <a href="javascript:;" class="left"><span class="fa fa-arrow-left"></span></a>
+        <h3>传淘云购</h3>
+        <a href="javascript:;" class="right"><span class="fa fa-search"></span></a>
+    </header>
+    <style>
+        .ccc_container {
+            width:100%;
+            height:100%;
+            padding-top:45px;
+            padding-bottom:55px;
+        }
+        .ccc_content {
+            width:100%;
+            height:100%;
+            position:relative;
+            background-color: pink;
+        }
+        .ccc_left {
+            width:90px;
+            float:left;
+            background-color: orange;
+        }
+        .ccc_right {
+            padding:0 20px;
+            background-color: blue;
+            overflow:hidden;
+            height:100%;
+            position:relative;
+        }
+
+    </style>
+    <div class="ccc_container">
+        <div class="ccc_content">
+            <div class="ccc_left">
+                <ul>
+                    <li class="now"><a href="javascript:;" data-id="1">运动馆</a></li>
+                    <li class=""><a href="javascript:;" data-id="2">女士馆</a></li>
+                    <li class=""><a href="javascript:;" data-id="3">男士馆</a></li>
+                    <li class=""><a href="javascript:;" data-id="4">帆布馆</a></li>
+                    <li class=""><a href="javascript:;" data-id="5">户外管</a></li>
+                    <li class=""><a href="javascript:;" data-id="6">测试馆</a></li>
+                </ul>
+            </div>
+            <div class="ccc_right">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul>
+                            <li><a href="javascript:;"><img src="images/brand1.png" alt=""><p>耐克</p></a></li>
+                            <li><a href="javascript:;"><img src="images/brand2.png" alt=""><p>阿迪</p></a></li>
+                            <li><a href="javascript:;"><img src="images/brand3.png" alt=""><p>新百伦</p></a></li>
+                            <li><a href="javascript:;"><img src="images/brand4.png" alt=""><p>哥伦比亚</p></a></li>
+                            <li><a href="javascript:;"><img src="images/brand5.png" alt=""><p>匡威</p></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="ct_footer">
+        <a class="tab_home fa fa-home" href="index.html"><span>首页</span></a>
+        <a class="tab_cate fa fa-bars now" href="cate.html"><span>分类</span></a>
+        <a class="tab_cart fa fa-shopping-cart" href="cart.html"><span>购物车</span></a>
+        <a class="tab_user fa fa-user" href="user/index.html"><span>会员中心</span></a>
+    </footer>
+</div>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
+<script>
+    mui('.mui-scroll-wrapper').scroll({
+        bounce:true,
+        scrollX:false,
+        scrollY:true,
+        deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    });
+</script>
+<script>
+    let arr=[1,2,3,4,5,6];
+    if(arr.length>5){
+        arr.shift();
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

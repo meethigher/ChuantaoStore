@@ -1,57 +1,71 @@
-/*search form*/
-.lt_search{
-    margin-top: 10px;
-    padding: 0 10px;
+.ct_content_box {
+    width:100%;
+    height:100%;
+    padding:10px 10px 0 10px;
 }
-.lt_search form{
-    position: relative;
+/*搜索栏*/
+.btn_search {
+    position:relative;
 }
-.lt_search form .search_input{
-    background: #fff;
-    border: 1px solid #069;
-    text-align: left;
-    font-size: 12px;
+.btn_search input {
+    margin:0;
+    padding:0;
+    border:1px solid #006699;
+    height:30px;
+    line-height:30px;
+    padding-left:10px;
+    font-size:12px;
 }
-.lt_search form .search_btn{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 60px;
-    height: 34px;
-    background: #069;
-    text-align: center;
-    line-height: 34px;
-    color: #fff;
-    font-size: 12px;
-    border-radius: 0 6px 6px 0;
+.btn_search a {
+    color:#fff;
+    background-color: #006699;
+    width:60px;
+    height:30px;
+    line-height:30px;
+    text-decoration:none;
+    display:block;
+    text-align:center;
+    border-radius:0 3px 3px 0;
+    position:absolute;
+    top:0;
+    right:0;
 }
-
-/* search history */
-.lt_history{
-    font-size: 12px;
-    padding: 0 10px;
-    color: #999;
-    padding-bottom: 50px;
+/*清空搜索记录*/
+.ct_history {
+    margin-top:10px;
+    color:#666;
 }
-.lt_history .fa-trash{
-    height: 21px;
-    line-height: 21px;
+.ct_history .history {
+    font-size:12px;
+    float:left;
+    line-height:20px;
 }
-.lt_history ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px dashed #ccc;
-    margin-top: 10px;
+.ct_history .clear_history {
+    font-size:12px;
+    float:right;
+    line-height:20px;
 }
-.lt_history ul li{
-    border: 1px dashed #ccc;
-    height: 30px;
-    line-height: 30px;
-    border-bottom: none;
-    padding-left: 10px;
+/*搜索历史记录*/
+ul {
+    margin-top:10px;
 }
-.lt_history ul li .mui-icon-closeempty{
-    float: right;
-    margin-top: 2px;
+ul li {
+    height:30px;
+    line-height:30px;
+    padding:0 10px;
+    position:relative;
+    border-bottom:1px dashed #666;
+}
+ul li a {
+    text-decoration:none;
+    color:#666;
+    font-size:12px;
+}
+ul li a:active {
+    color:#666;
+}
+ul li .delete {
+    position:absolute;
+    top:10px;
+    right:0;
 }
