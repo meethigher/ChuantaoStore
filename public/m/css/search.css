@@ -1,5 +1,5 @@
 .ct_content {
-    padding:55px 0 55px 0 !important;
+    padding:45px 0 55px 0 !important;
 }
 .ct_content_box {
     width:100%;
@@ -8,6 +8,7 @@
 }
 /*搜索栏*/
 .btn_search {
+    margin-top:10px;
     position:relative;
     padding:0 10px;
 }
