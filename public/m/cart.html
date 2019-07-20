@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/mui/css/mui.min.css">
     <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/cate.css">
+    <link rel="stylesheet" href="css/cart.css">
     <title>传淘-购物车</title>
 </head>
 <body>
@@ -37,20 +37,6 @@
 <script src="assets/zepto/zepto.min.js"></script>
 <script src="assets/mui/js/mui.min.js"></script>
 <script src="assets/artTemplate/template-native.js"></script>
-<script id="firstTemplate" type="text/template">
-    <% for(let i=0;i<rows.length;i++) { %>
-    <li class="<%=i==0?'now':''%>"><a href="javascript:;" data-id="<%=rows[i].id%>"><%=rows[i].categoryName%></a></li>
-    <% } %>
-</script>
-<script id="secondTemplate" type="text/template">
-    <% if(rows.length) {%>
-    <% for(let i=0;i<rows.length;i++) { %>
-    <li><a href="javascript:;"><img src="<%=rows[i].brandLogo%>" alt=""><p><%=rows[i].brandName%></p></a></li>
-    <% } %>
-    <% } else { %>
-    <p>没有数据</p>
-    <% } %>
-</script>
-<script src="js/cate.js"></script>
+<script src="js/cart.js"></script>
 </body>
 </html>
